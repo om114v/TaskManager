@@ -1,29 +1,30 @@
 package com.amdox.taskmanager.entity;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import com.amdox.taskmanager.bo.BaseEntity;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import org.springframework.data.mongodb.core.mapping.Document;
-
-import com.amdox.taskmanager.bo.BaseEntity;
-import com.amdox.taskmanager.constant.Role;
 
 @Document
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class User extends BaseEntity {
+public class Profile extends BaseEntity {
 
 	private String name;
 
 	private String email;
 
-	private String password;
+	private String department;
 
-	private Role role;
+	private String designation;
+
+	private String organisation;
 
 	private Boolean isActive = true;
 
